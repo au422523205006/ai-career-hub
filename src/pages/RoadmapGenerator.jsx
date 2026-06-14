@@ -213,6 +213,141 @@ function RoadmapGenerator() {
       ],
     }
   }
+  // MECHANICAL ENGINEER
+if (userGoal.includes('mechanical')) {
+  return {
+    title: `${goal} Roadmap`,
+    steps: [
+      {
+        title: 'Engineering Drawing',
+        desc: 'Learn engineering drawing fundamentals.',
+        duration: '2 weeks',
+      },
+      {
+        title: 'AutoCAD',
+        desc: 'Learn AutoCAD design and drafting.',
+        duration: '3 weeks',
+      },
+      {
+        title: 'SolidWorks',
+        desc: 'Learn 3D modeling and simulations.',
+        duration: '1 month',
+      },
+      {
+        title: 'Manufacturing',
+        desc: 'Study manufacturing processes and materials.',
+        duration: '1 month',
+      },
+      {
+        title: 'Projects',
+        desc: 'Build mechanical design projects.',
+        duration: 'Ongoing',
+      },
+    ],
+  }
+}
+
+// CIVIL ENGINEER
+if (userGoal.includes('civil')) {
+  return {
+    title: `${goal} Roadmap`,
+    steps: [
+      {
+        title: 'Surveying',
+        desc: 'Learn land surveying techniques.',
+        duration: '2 weeks',
+      },
+      {
+        title: 'Estimation',
+        desc: 'Learn cost estimation and quantity surveying.',
+        duration: '3 weeks',
+      },
+      {
+        title: 'AutoCAD',
+        desc: 'Learn civil drafting and design.',
+        duration: '1 month',
+      },
+      {
+        title: 'Construction',
+        desc: 'Study construction materials and methods.',
+        duration: '1 month',
+      },
+      {
+        title: 'Projects',
+        desc: 'Build civil engineering case studies.',
+        duration: 'Ongoing',
+      },
+    ],
+  }
+}
+
+// DIGITAL MARKETING
+if (userGoal.includes('marketing')) {
+  return {
+    title: `${goal} Roadmap`,
+    steps: [
+      {
+        title: 'SEO',
+        desc: 'Learn search engine optimization.',
+        duration: '2 weeks',
+      },
+      {
+        title: 'Social Media Marketing',
+        desc: 'Learn Instagram, Facebook and LinkedIn marketing.',
+        duration: '3 weeks',
+      },
+      {
+        title: 'Google Ads',
+        desc: 'Create and manage ad campaigns.',
+        duration: '3 weeks',
+      },
+      {
+        title: 'Analytics',
+        desc: 'Track campaign performance.',
+        duration: '2 weeks',
+      },
+      {
+        title: 'Projects',
+        desc: 'Run marketing campaigns and build portfolio.',
+        duration: 'Ongoing',
+      },
+    ],
+  }
+}
+
+// TNPSC
+if (userGoal.includes('tnpsc')) {
+  return {
+    title: `${goal} Roadmap`,
+    steps: [
+      {
+        title: 'History',
+        desc: 'Study Indian and Tamil Nadu history.',
+        duration: '1 month',
+      },
+      {
+        title: 'Polity',
+        desc: 'Learn Indian Constitution and governance.',
+        duration: '1 month',
+      },
+      {
+        title: 'Economy',
+        desc: 'Understand Indian economy concepts.',
+        duration: '3 weeks',
+      },
+      {
+        title: 'Current Affairs',
+        desc: 'Read daily current affairs.',
+        duration: 'Daily',
+      },
+      {
+        title: 'Mock Tests',
+        desc: 'Practice previous year questions.',
+        duration: 'Ongoing',
+      },
+    ],
+  }
+}
 
   // DEFAULT
   return {

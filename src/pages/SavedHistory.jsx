@@ -14,18 +14,20 @@ function SavedHistory() {
     fetchHistory()
   }, [])
 
-  const fetchHistory = async () => {
-    setLoading(true)
-    try {
-      const res = await historyAPI.getAll()
-      setHistory(res.data.history || demoHistory)
-    } catch (err) {
-      setHistory(demoHistory)
-    } finally {
-      setLoading(false)
-    }
-  }
+const fetchHistory = async () => {
+  setLoading(true)
 
+  try {
+    const res = await historyAPI.getAll()
+
+    setHistory(res.data.history || [])
+  } catch (err) {
+    console.error(err)
+    setHistory([])
+  } finally {
+    setLoading(false)
+  }
+}
   const handleDelete = async (id) => {
     try {
       await historyAPI.delete(id)
@@ -37,14 +39,7 @@ function SavedHistory() {
     }
   }
 
-  const demoHistory = [
-    { _id: '1', type: 'resume', title: 'Resume Analysis', desc: 'ATS Score: 78/100', date: '2025-05-01' },
-    { _id: '2', type: 'interview', title: 'Frontend Developer Interview', desc: '5 questions completed', date: '2025-04-30' },
-    { _id: '3', type: 'roadmap', title: 'Full Stack Developer Roadmap', desc: '3/5 steps completed', date: '2025-04-28' },
-    { _id: '4', type: 'resume', title: 'Resume Analysis', desc: 'ATS Score: 85/100', date: '2025-04-25' },
-    { _id: '5', type: 'interview', title: 'Backend Developer Interview', desc: '5 questions completed', date: '2025-04-20' },
-  ]
-
+ 
   const icons = {
     resume: <FileText className="w-5 h-5 text-violet-400" />,
     interview: <MessageSquare className="w-5 h-5 text-blue-400" />,

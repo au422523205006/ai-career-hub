@@ -263,6 +263,105 @@ const topicData = {
     ],
   },
 
+  "Mechanical Engineering": {
+  explain:
+    "Mechanical Engineering deals with machines, manufacturing, thermodynamics, design and production systems.",
+
+  tasks: [
+    "Learn Engineering Drawing",
+    "Practice AutoCAD",
+    "Learn SolidWorks",
+    "Study Manufacturing Basics"
+  ],
+
+  links: [
+    {
+      title: "NPTEL Mechanical Engineering",
+      url: "https://nptel.ac.in"
+    },
+    {
+      title: "AutoCAD Tutorials",
+      url: "https://www.autodesk.com/learn"
+    }
+  ]
+},
+
+"Civil Engineering": {
+  explain:
+    "Civil Engineering focuses on construction, structures, roads, bridges, surveying and infrastructure development.",
+
+  tasks: [
+    "Learn Surveying",
+    "Practice Estimation",
+    "Study Structural Design",
+    "Learn AutoCAD Civil"
+  ],
+
+  links: [
+    {
+      title: "NPTEL Civil Engineering",
+      url: "https://nptel.ac.in"
+    }
+  ]
+},
+
+"Digital Marketing": {
+  explain:
+    "Digital Marketing involves SEO, social media marketing, Google Ads, email marketing and analytics.",
+
+  tasks: [
+    "Learn SEO Basics",
+    "Create Social Media Campaign",
+    "Learn Google Ads",
+    "Study Analytics"
+  ],
+
+  links: [
+    {
+      title: "Google Digital Garage",
+      url: "https://learndigital.withgoogle.com"
+    }
+  ]
+},
+
+"TNPSC": {
+  explain:
+    "TNPSC preparation includes History, Polity, Economy, Geography and Current Affairs.",
+
+  tasks: [
+    "Study History",
+    "Study Polity",
+    "Read Current Affairs",
+    "Solve Mock Tests"
+  ],
+
+  links: [
+    {
+      title: "TNPSC Official Website",
+      url: "https://www.tnpsc.gov.in"
+    }
+  ]
+},
+
+"Teacher": {
+  explain:
+    "Teaching requires subject knowledge, communication skills and classroom management.",
+
+  tasks: [
+    "Improve Communication",
+    "Create Lesson Plans",
+    "Practice Teaching",
+    "Prepare Notes"
+  ],
+
+  links: [
+    {
+      title: "SWAYAM Courses",
+      url: "https://swayam.gov.in"
+    }
+  ]
+},
+
   "Interview Prep": {
     explain:
       "Interview preparation includes technical basics, project explanation, resume preparation, communication, and mock interviews.",
