@@ -12,7 +12,7 @@ import roadmapRoutes from './routes/roadmap.js'
 import historyRoutes from './routes/history.js'
 import adminRoutes from './routes/admin.js'
 import chatRoutes from './routes/chat.js'
-import voiceRoutes from "./routes/voice.js"
+//import voiceRoutes from "./routes/voice.js"
 import progressRoutes from "./routes/progress.js"
 import aiRoutes from "./routes/ai.js"
 
@@ -27,7 +27,7 @@ app.use("/uploads", express.static("uploads"))
 
 app.use("/api/progress", progressRoutes)
 app.use("/api/ai", aiRoutes)
-app.use("/api/voice", voiceRoutes)
+//app.use("/api/voice", voiceRoutes)
 app.use("/api/auth", authRoutes)
 app.use("/api/resume", resumeRoutes)
 app.use("/api/interview", interviewRoutes)
