@@ -36,7 +36,7 @@ function VoiceAssistant() {
       const formData = new FormData()
       formData.append('audio', audioBlob, 'voice.webm')
 
-      const res = await fetch('http:///api/voice', {
+      const res = await fetch('http://ai-career-hub-backend.onrender.com/api/voice', {
         method: 'POST',
         body: formData,
       })

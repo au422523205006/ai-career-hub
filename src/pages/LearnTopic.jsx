@@ -387,7 +387,7 @@ function LearnTopic() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/progress?userId=${userId}&goal=${goal}`)
+      .get(`http://ai-career-hub-backend.onrender.com/api/progress?userId=${userId}&goal=${goal}`)
       .then((res) => {
         const saved = res.data.topicTasks?.[decodedTopic] || []
         setCompletedTasks(saved)
@@ -409,7 +409,7 @@ function LearnTopic() {
     setCompletedTasks(updated)
 
     try {
-      await axios.post("http://localhost:5000/api/progress", {
+      await axios.post("http://ai-career-hub-backend.onrender.com/api/progress", {
         userId,
         goal,
         topic: decodedTopic,

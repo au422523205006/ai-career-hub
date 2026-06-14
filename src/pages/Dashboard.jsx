@@ -31,7 +31,7 @@ function Dashboard() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/progress?userId=${userId}&goal=${goal}`)
+      .get(`http://ai-career-hub-backend.onrender.com/api/progress?userId=${userId}&goal=${goal}`)
       .then((res) => {
         setProgress(res.data)
       })

@@ -11,14 +11,14 @@ function Roadmap() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/roadmap?goal=${goal}`)
+      .get(`http://ai-career-hub-backend.onrender.com/api/roadmap?goal=${goal}`)
       .then((res) => setData(res.data))
       .catch((err) => console.log(err))
   }, [])
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/progress?userId=${userId}&goal=${goal}`)
+      .get(`http://ai-career-hub-backend.onrender.com/api/progress?userId=${userId}&goal=${goal}`)
       .then((res) => setCompleted(res.data.completedLevels || []))
       .catch((err) => console.log(err))
   }, [])
@@ -34,7 +34,7 @@ function Roadmap() {
 
     setCompleted(updated)
 
-    await axios.post("http://localhost:5000/api/progress", {
+    await axios.post("http://ai-career-hub-backend.onrender.com/api/progress", {
       userId,
       goal,
       completedLevels: updated,
