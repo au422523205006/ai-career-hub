@@ -465,21 +465,24 @@ hover:bg-gray-800">
         </div>
 
 
-        <footer className="mt-20 border-t border-gray-800 pt-10 pb-8 text-center">
-  <h3 className="text-2xl font-bold text-violet-400 mb-2">
+       <footer className="mt-20 border-t border-gray-800 pt-10 pb-8 text-center px-4">
+  <h3 className="text-xl sm:text-2xl font-bold text-violet-400 mb-2">
     AI Career Hub
   </h3>
 
-  <p className="text-gray-400">
+  <p className="text-gray-400 text-sm sm:text-base">
     Your AI-Powered Career Growth Platform
   </p>
 
-  <p className="text-gray-500 text-sm mt-3">
+  <p className="text-gray-500 text-xs sm:text-sm mt-3 px-2 max-w-xl mx-auto">
     Built with React, Node.js, MongoDB & Gemini AI
   </p>
 
   <p className="text-gray-600 text-sm mt-4">
-    Made with ❤️ by Rajalakshmi
+    Made with ❤️ by{" "}
+    <span className="text-violet-400 font-medium">
+      Rajalakshmi
+    </span>
   </p>
 
   <p className="text-gray-700 text-xs mt-3">

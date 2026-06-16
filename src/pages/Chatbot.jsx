@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
-import { MessageSquare, X, Send, Bot, User } from 'lucide-react'
+import { MessageSquare, X, Send, Bot, User, Mic } from 'lucide-react'
+
 
 function Chatbot() {
   const [isOpen, setIsOpen] = useState(false)
@@ -54,6 +55,7 @@ function Chatbot() {
 
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3 border-b border-gray-700 bg-violet-600 rounded-t-2xl">
+export default Chatbot 
             <div className="flex items-center gap-2">
               <Bot className="w-5 h-5 text-white" />
               <span className="text-white font-medium text-sm">AI Career Assistant</span>
@@ -92,27 +94,34 @@ function Chatbot() {
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Input */}
           <div className="px-3 py-3 border-t border-gray-700 flex gap-2">
-            <input
-              type="text"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyPress={handleKeyPress}
-              placeholder="Type a message..."
-              className="flex-1 bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-violet-500"
-            />
-            <button
-              onClick={handleSend}
-              disabled={loading}
-              className="bg-violet-600 hover:bg-violet-700 disabled:opacity-50 p-2 rounded-xl transition"
-            >
-              <Send className="w-4 h-4 text-white" />
-            </button>
-          </div>
+  <input
+    type="text"
+    value={input}
+    onChange={(e) => setInput(e.target.value)}
+    onKeyDown={handleKeyPress}
+    placeholder="Type a message..."
+    className="flex-1 bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-violet-500"
+  />
 
-        </div>
-      )}
+        {/* Voice Button */}
+        <button
+          className="bg-gray-700 hover:bg-gray-600 p-2 rounded-xl transition"
+          title="Voice Input"
+        >
+          <Mic className="w-4 h-4 text-white" />
+        </button>
+
+        {/* Send Button */}
+        <button
+          onClick={handleSend}
+          disabled={loading}
+          className="bg-violet-600 hover:bg-violet-700 disabled:opacity-50 p-2 rounded-xl transition"
+        >
+          <Send className="w-4 h-4 text-white" />
+        </button>
+      </div>
+            
 
       {/* Float Button */}
       <button
@@ -126,4 +135,4 @@ function Chatbot() {
   )
 }
 
-export default Chatbot
+export default Chatbot 
