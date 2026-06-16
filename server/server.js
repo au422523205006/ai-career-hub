@@ -19,8 +19,15 @@ import aiRoutes from "./routes/ai.js"
 console.log("OPENAI KEY LOADED:", process.env.OPENAI_API_KEY ? "YES" : "NO")
 
 const app = express()
+app.use(cors({
+  origin: [
+    'http://localhost:5174',
+    'https://ai-career-hub-ten.vercel.app'
+  ],
+  credentials: true
+}))
 
-app.use(cors({ origin: "http://localhost:5174","https://ai-career-hub-ten.vercel.app", credentials: true }))
+
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use("/uploads", express.static("uploads"))
