@@ -24,14 +24,18 @@ function Chatbot() {
 
     try {
       const token = localStorage.getItem('token')
-      const res = await fetch('http://localhost:5000/api/chat', {
+      const res = await fetch(
+      `${import.meta.env.VITE_API_URL}/chat`,
+      {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + token
         },
         body: JSON.stringify({ message: userMessage })
-      })
+      }
+    )
+     
       const data = await res.json()
       setMessages(prev => [...prev, { role: 'bot', text: data.reply }])
     } catch (err) {
